@@ -35,16 +35,16 @@
                     </td>
                     <td></td>
                     <td>
-                        <asp:Button ID="btnCollectionString" runat="server" BackColor="Yellow" Text="collection String" width="123px" />
+                        <asp:Button ID="btnCollectionString" runat="server" BackColor="Yellow" Text="collection String" width="123px" OnClick="btnCollectionString_Click" />
                     </td>
                     <td >
-                        <asp:Button ID="btnArrayDecimal" runat="server" BackColor="Yellow" Text="Array Decimal" width="112px" />
+                        <asp:Button ID="btnArrayDecimal" runat="server" BackColor="Yellow" Text="Array Decimal" width="112px" OnClick="btnArrayDecimal_Click" />
                     </td>
                      <td>
                     </td>
                     <td></td>
                     <td >
-                        <asp:Button ID="btnCollectionDecimal" runat="server" BackColor="Yellow" CssClass="auto-style9" Text="Collection Decimal" width="123px" />
+                        <asp:Button ID="btnCollectionDecimal" runat="server" BackColor="Yellow" CssClass="auto-style9" Text="Collection Decimal" width="123px" OnClick="btnCollectionDecimal_Click" />
                     </td>
                      <td>
                     </td>
