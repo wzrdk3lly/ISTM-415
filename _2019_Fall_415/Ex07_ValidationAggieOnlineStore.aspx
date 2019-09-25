@@ -199,7 +199,7 @@
                 </td>
             </tr>
         </table>
-        <asp:Button ID="btnCreateAccount" runat="server" CssClass="auto-style22" OnClick="btnCreateAccount_Click" Text="Create your Aggie Account" Width="413px" />
+        <asp:Button ID="btnCreateAccount" runat="server" CssClass="auto-style22" OnClick="btnCreateAccount_Click" Text="Create an Aggie Account" Width="413px" />
     </form>
 </body>
 </html>
