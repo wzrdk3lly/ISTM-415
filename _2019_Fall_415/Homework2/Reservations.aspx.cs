@@ -72,7 +72,7 @@ public partial class Homework2_Reservations : System.Web.UI.Page
 
         else if (rblBedType.SelectedIndex == 2)
         {
-            finalCost = (100 + totalTime) + (addCost * totalTime);
+            finalCost = (100m * totalTime) + (addCost * totalTime);
         }
 
         lblHiddenFinalCost.Text = finalCost.ToString("c");

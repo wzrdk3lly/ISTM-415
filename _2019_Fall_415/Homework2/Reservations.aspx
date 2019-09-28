@@ -204,7 +204,7 @@
             <td>
                 &nbsp;</td>
             <td class="auto-style14">
-                <asp:Button ID="btnSubmit" runat="server" OnClick="btnSubmit_Click" Text="Submit" Width="203px" />
+                <asp:Button ID="btnSubmit" runat="server" OnClick="btnSubmit_Click" Text="Submit" Width="203px" PostBackUrl="~/Homework2/Confirmation.aspx" />
 &nbsp;&nbsp;
                 <asp:Button ID="btnClear" runat="server" OnClick="btnClear_Click" Text="Clear" Width="203px" />
             </td>
@@ -213,7 +213,7 @@
         </tr>
     </table>
         <asp:Label ID="lblSubmitMessage" runat="server" CssClass="auto-style11" Height="96px" Text="Thank you for your request. We will get back to you within 24 hours." Width="471px"></asp:Label>
-        <asp:Label ID="lblHiddenFinalCost" runat="server" Visible="False"></asp:Label>
+        <asp:Label ID="lblHiddenFinalCost" runat="server"></asp:Label>
         <br />
     </form>
     </body>

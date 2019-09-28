@@ -12,6 +12,7 @@ public partial class Homework2_Confirmation : System.Web.UI.Page
         TextBox previousFirstName = (TextBox)PreviousPage.FindControl("txtFirstName");
         lblFirstName.Text = previousFirstName.Text;
         TextBox previousLastName = (TextBox)PreviousPage.FindControl("txtLastName");
+        
         TextBox previousEmail = (TextBox)PreviousPage.FindControl("txtEmailAddress");
         TextBox previousTelephone = (TextBox)PreviousPage.FindControl("txtTelephoneNumber");
         DropDownList previousPrefered = (DropDownList)PreviousPage.FindControl("ddlPreffereedMethod");
