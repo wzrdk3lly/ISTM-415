@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Confirmation.aspx.cs" Inherits="Homework2_Confirmation" %>
 
 <!DOCTYPE html>
-
+    
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
@@ -56,31 +56,31 @@
             <tr>
                 <td class="auto-style7">First name</td>
                 <td class="auto-style5">
-                    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                    <asp:Label ID="lblFirstName" runat="server"></asp:Label>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style7">Last name</td>
                 <td class="auto-style5">
-                    <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
+                    <asp:Label ID="lblLastName" runat="server"></asp:Label>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style7">Email</td>
                 <td class="auto-style5">
-                    <asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>
+                    <asp:Label ID="lblEmail" runat="server"></asp:Label>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style7">Phone</td>
                 <td class="auto-style5">
-                    <asp:Label ID="Label4" runat="server" Text="Label"></asp:Label>
+                    <asp:Label ID="lblPhone" runat="server"></asp:Label>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style7">Preferred method</td>
                 <td class="auto-style5">
-                    <asp:Label ID="Label5" runat="server" Text="Label"></asp:Label>
+                    <asp:Label ID="lblPrefferredMethod" runat="server"></asp:Label>
                 </td>
             </tr>
         </table>
@@ -90,43 +90,43 @@
             <tr>
                 <td class="auto-style10">Arrival date</td>
                 <td class="auto-style9">
-                    <asp:Label ID="Label6" runat="server" Text="Label"></asp:Label>
+                    <asp:Label ID="lblArrivalDate" runat="server"></asp:Label>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style10">Departure date</td>
                 <td class="auto-style9">
-                    <asp:Label ID="Label7" runat="server" Text="Label"></asp:Label>
+                    <asp:Label ID="lblDepartureDate" runat="server"></asp:Label>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style10">No. of days</td>
                 <td class="auto-style9">
-                    <asp:Label ID="Label8" runat="server" Text="Label"></asp:Label>
+                    <asp:Label ID="lblNoDays" runat="server"></asp:Label>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style10">No. of people</td>
                 <td class="auto-style9">
-                    <asp:Label ID="Label9" runat="server" Text="Label"></asp:Label>
+                    <asp:Label ID="lblNoPeople" runat="server"></asp:Label>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style10">Bed type</td>
                 <td class="auto-style9">
-                    <asp:Label ID="Label10" runat="server" Text="Label"></asp:Label>
+                    <asp:Label ID="lblBedType" runat="server"></asp:Label>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style10">Special request</td>
                 <td class="auto-style9">
-                    <asp:Label ID="Label11" runat="server" Text="Label"></asp:Label>
+                    <asp:Label ID="lblSpecialRequest" runat="server"></asp:Label>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style10">Total cost</td>
                 <td class="auto-style9">
-                    <asp:Label ID="Label12" runat="server" Text="Label"></asp:Label>
+                    <asp:Label ID="lblTotalCost" runat="server"></asp:Label>
                 </td>
             </tr>
         </table>
