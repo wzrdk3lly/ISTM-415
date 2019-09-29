@@ -14,9 +14,8 @@
         }
         .auto-style3 {
             width: 1384px;
-        }
-        .auto-style4 {
-            width: 1382px;
+            color: #FF0000;
+            margin-left: 40px;
         }
         .auto-style5 {
             width: 1168px;
@@ -38,10 +37,14 @@
             margin-bottom: 32px;
             color: #33CC33;
         }
+        .auto-style12 {
+            width: 1382px;
+            color: #0000FF;
+        }
         </style>
 </head>
 <body>
-    <h1 class="auto-style4">Royal Inns and Suites </h1>
+    <h1 class="auto-style12">Royal Inns and Suites </h1>
     <h2 class="auto-style1"><span class="auto-style3"><em>Where you're always treated like royalty</em></span> </h2>
     <form id="form1" runat="server" defaultfocus="txtArrivalDate">
         <div>
@@ -50,7 +53,7 @@
     <p>
         &nbsp;
     </p>
-    <h2 class="auto-style4">Request Confirmation </h2>
+    <h2 class="auto-style12">Request Confirmation </h2>
     <h3>Please confirm your reservation request</h3>
         <table class="auto-style8">
             <tr>
@@ -130,7 +133,7 @@
                 </td>
             </tr>
         </table>
-        <asp:Button ID="btnConfirm" runat="server" Text="Confirm Request" Width="251px" />
+        <asp:Button ID="btnConfirm" runat="server" Text="Confirm Request" Width="251px" OnClick="btnConfirm_Click" />
 &nbsp;
         <asp:Button ID="btnModifyRequest" runat="server" Text="Modify Request" Width="251px" />
         <p>

@@ -48,8 +48,8 @@ public partial class Homework2_Reservations : System.Web.UI.Page
         
         decimal finalCost = 0m;
         decimal addCost = 0m;
-        
 
+        lblHiddenDays.Text = totalTime.ToString();
         
         int numPeople = Convert.ToInt32(ddlNumberPeople.SelectedItem.Text);
 
@@ -77,10 +77,6 @@ public partial class Homework2_Reservations : System.Web.UI.Page
 
         lblHiddenFinalCost.Text = finalCost.ToString("c");
 
-
-
-
-
         /* Psudo-code for calculation logic
          * decimal arrivalTime = Convert.Todecimal(arrivaltime)
          * decimal departureTime = Convert.Todecimal(departuretime)
@@ -99,7 +95,7 @@ public partial class Homework2_Reservations : System.Web.UI.Page
          *    dec  finalCost = (110 * totalTime) + (addPeopleCost * totalTime)
          * elseif(ddlBedType == "One Queen")
          *    decL  finalcost = (100 * totalTime) + (addPEopleCost * totalTime)
-     
+    
          * 
          */
 

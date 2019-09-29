@@ -88,7 +88,7 @@
     </p>
     <h2 class="auto-style4">Reservation Request </h2>
         <p class="auto-style4">
-            <asp:RequiredFieldValidator ID="rfvAsterick" runat="server" ControlToValidate="txtFirstName" CssClass="auto-style3"></asp:RequiredFieldValidator>
+            <asp:Label ID="lblrequired" runat="server" ForeColor="Red" Text="* means that the feild is required"></asp:Label>
         </p>
     <h3>Request Data</h3>
     <table>
@@ -204,7 +204,7 @@
             <td>
                 &nbsp;</td>
             <td class="auto-style14">
-                <asp:Button ID="btnSubmit" runat="server" OnClick="btnSubmit_Click" Text="Submit" Width="203px" />
+                <asp:Button ID="btnSubmit" runat="server" OnClick="btnSubmit_Click" Text="Submit" Width="203px" PostBackUrl="~/Homework2/Confirmation.aspx" />
 &nbsp;&nbsp;
                 <asp:Button ID="btnClear" runat="server" OnClick="btnClear_Click" Text="Clear" Width="203px" />
             </td>
@@ -214,6 +214,8 @@
     </table>
         <asp:Label ID="lblSubmitMessage" runat="server" CssClass="auto-style11" Height="96px" Text="Thank you for your request. We will get back to you within 24 hours." Width="471px"></asp:Label>
         <asp:Label ID="lblHiddenFinalCost" runat="server" Visible="False"></asp:Label>
+        &nbsp;
+        <asp:Label ID="lblHiddenDays" runat="server" Visible="False"></asp:Label>
         <br />
     </form>
     </body>
