@@ -36,8 +36,10 @@ public partial class Homework2_Reservations : System.Web.UI.Page
 
     protected void btnSubmit_Click(object sender, EventArgs e)
     {
+        //This is supposd to display the message then go to the next page. but it doesn't work :(
         lblSubmitMessage.Visible = true;
-
+        System.Threading.Thread.Sleep(2000);
+        lblSubmitMessage.Visible = false;
         // converting arrival and departure time 
         DateTime arrivalTime = DateTime.Parse(txtArrivalDate.Text);
         DateTime departureTime = DateTime.Parse(txtDepartureDate.Text);
@@ -98,7 +100,7 @@ public partial class Homework2_Reservations : System.Web.UI.Page
     
          * 
          */
-
+        
     }
 
     protected void btnClear_Click(object sender, EventArgs e)

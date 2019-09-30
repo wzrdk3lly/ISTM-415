@@ -84,8 +84,7 @@
             <hr class="auto-style2" />
         </div>
     <p>
-        &nbsp;
-    </p>
+        &nbsp;</p>
     <h2 class="auto-style4">Reservation Request </h2>
         <p class="auto-style4">
             <asp:Label ID="lblrequired" runat="server" ForeColor="Red" Text="* means that the feild is required"></asp:Label>
