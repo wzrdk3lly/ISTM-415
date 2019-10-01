@@ -23,7 +23,7 @@
         }
 
         .auto-style5 {
-            width: 1200px;
+            width: 1619px;
         }
 
         .auto-style6 {
@@ -37,7 +37,7 @@
             height: 62px;
         }
         .auto-style9 {
-            width: 1200px;
+            width: 1619px;
             height: 62px;
         }
         .auto-style10 {
@@ -54,7 +54,7 @@
             height: 42px;
         }
         .auto-style13 {
-            width: 1200px;
+            width: 1619px;
             height: 42px;
         }
         .auto-style14 {
@@ -74,12 +74,31 @@
             width: 458px;
             height: 56px;
         }
+        .auto-style19 {
+            width: 288px;
+            height: 50px;
+        }
+        .auto-style20 {
+            width: 1619px;
+            height: 50px;
+        }
+        .auto-style21 {
+            height: 132px;
+        }
+        .auto-style22 {
+            width: 1319px;
+            height: 132px;
+        }
+        .auto-style23 {
+            width: 458px;
+            height: 132px;
+        }
     </style>
 </head>
 <body>
     <h1 class="auto-style4">Royal Inns and Suites </h1>
     <h2 class="auto-style1"><span class="auto-style3"><em>Where you're always treated like royalty</em></span> </h2>
-    <form id="form1" runat="server" defaultfocus="txtArrivalDate">
+    <form id="form1" runat="server" defaultfocus="txtArrivalDate" submitdisabledcontrols="True" visible="True">
         <div>
             <hr class="auto-style2" />
         </div>
@@ -92,13 +111,14 @@
     <h3>Request Data</h3>
     <table>
         <tr>
-            <td class="auto-style6">Arrival date
+            <td class="auto-style19">Arrival date
             </td>
-            <td class="auto-style5">
+            <td class="auto-style20">
                 <asp:TextBox ID="txtArrivalDate" runat="server"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="rfvArrival" runat="server" Display="Dynamic" ErrorMessage="*" ForeColor="Red" ControlToValidate="txtArrivalDate"></asp:RequiredFieldValidator>
-&nbsp;<asp:CompareValidator ID="cvArrivalDate" runat="server" ControlToValidate="txtArrivalDate" Display="Dynamic" ErrorMessage="A date must be entered" ForeColor="Red" Type="Date" Operator="DataTypeCheck"></asp:CompareValidator>
-&nbsp;<asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="txtArrivalDate" ErrorMessage="The format must be in 99/99/9999 format" Display="Dynamic" Enabled="False" ForeColor="Red"></asp:RegularExpressionValidator>
+&nbsp;&nbsp;<asp:CompareValidator ID="cvArrivalDate" runat="server" ControlToValidate="txtArrivalDate" Display="Dynamic" ErrorMessage="Date must be entered " ForeColor="Red" Type="Date" Operator="DataTypeCheck"></asp:CompareValidator>
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ValidationExpression="^(0[1-9]|1[012])[-/.](0[1-9]|[12][0-9]|3[01])[-/.](19|20)\d\d$" ErrorMessage="Date must be entered in 99/99/9999 format" ControlToValidate="txtArrivalDate" ForeColor="Red"></asp:RegularExpressionValidator>
+            &nbsp;<asp:CompareValidator ID="cvArrivalDatebefore" runat="server" ControlToCompare="txtDepartureDate" ControlToValidate="txtArrivalDate" Display="Dynamic" ErrorMessage="Date must be before departure date" ForeColor="Red" Operator="LessThan" Type="Date"></asp:CompareValidator>
             </td>
 
 
@@ -110,6 +130,8 @@
                 <asp:TextBox ID="txtDepartureDate" runat="server"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="rfvDeparture" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="txtDepartureDate" Display="Dynamic"></asp:RequiredFieldValidator>
 &nbsp;<asp:CompareValidator ID="cvAfterArrivalDate" runat="server" ControlToCompare="txtArrivalDate" ControlToValidate="txtDepartureDate" Display="Dynamic" ErrorMessage="CompareValidator" ForeColor="Red" Operator="GreaterThan" Type="Date">Must be after arrival date</asp:CompareValidator>
+            &nbsp;<asp:CompareValidator ID="cvArrivalDate0" runat="server" ControlToValidate="txtDepartureDate" Display="Dynamic" ErrorMessage="Date must be entered " ForeColor="Red" Type="Date" Operator="DataTypeCheck"></asp:CompareValidator>
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ValidationExpression="^(0[1-9]|1[012])[-/.](0[1-9]|[12][0-9]|3[01])[-/.](19|20)\d\d$" ErrorMessage="Date must be entered in 99/99/9999 format" ControlToValidate="txtDepartureDate" ForeColor="Red"></asp:RegularExpressionValidator>
             </td>
         </tr>
         <tr>
@@ -200,15 +222,19 @@
                 &nbsp;</td>
         </tr>
          <tr>
-            <td>
-                &nbsp;</td>
-            <td class="auto-style14">
-                <asp:Button ID="btnSubmit" runat="server" OnClick="btnSubmit_Click" Text="Submit" Width="203px" PostBackUrl="~/Homework2/Confirmation.aspx" />
+            <td class="auto-style21">
+                <asp:Panel ID="Panel2" runat="server" DefaultButton="btnSubmit" Height="50px" Width="201px">
+                    <asp:Button ID="btnSubmit" runat="server" OnClick="btnSubmit_Click" Text="Submit" Width="214px" PostBackUrl="~/Homework2/Confirmation.aspx" Height="46px" />
+                </asp:Panel>
+             </td>
+            <td class="auto-style22">
+                <asp:Panel ID="Panel1" runat="server" Width="279px">
+                </asp:Panel>
 &nbsp;&nbsp;
                 <asp:Button ID="btnClear" runat="server" OnClick="btnClear_Click" Text="Clear" Width="203px" />
             </td>
-            <td class="auto-style7">
-                &nbsp;</td>
+            <td class="auto-style23">
+                </td>
         </tr>
     </table>
         <asp:Label ID="lblSubmitMessage" runat="server" CssClass="auto-style11" Height="96px" Text="Thank you for your request. We will get back to you within 24 hours." Width="471px"></asp:Label>
