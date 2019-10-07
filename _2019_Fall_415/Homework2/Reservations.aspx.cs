@@ -36,8 +36,10 @@ public partial class Homework2_Reservations : System.Web.UI.Page
 
     protected void btnSubmit_Click(object sender, EventArgs e)
     {
+        //This is supposd to display the message then go to the next page. but it doesn't work :(
         lblSubmitMessage.Visible = true;
-
+        System.Threading.Thread.Sleep(2000);
+        lblSubmitMessage.Visible = false;
         // converting arrival and departure time 
         DateTime arrivalTime = DateTime.Parse(txtArrivalDate.Text);
         DateTime departureTime = DateTime.Parse(txtDepartureDate.Text);
@@ -48,8 +50,8 @@ public partial class Homework2_Reservations : System.Web.UI.Page
         
         decimal finalCost = 0m;
         decimal addCost = 0m;
-        
 
+        lblHiddenDays.Text = totalTime.ToString();
         
         int numPeople = Convert.ToInt32(ddlNumberPeople.SelectedItem.Text);
 
@@ -77,10 +79,6 @@ public partial class Homework2_Reservations : System.Web.UI.Page
 
         lblHiddenFinalCost.Text = finalCost.ToString("c");
 
-
-
-
-
         /* Psudo-code for calculation logic
          * decimal arrivalTime = Convert.Todecimal(arrivaltime)
          * decimal departureTime = Convert.Todecimal(departuretime)
@@ -99,10 +97,10 @@ public partial class Homework2_Reservations : System.Web.UI.Page
          *    dec  finalCost = (110 * totalTime) + (addPeopleCost * totalTime)
          * elseif(ddlBedType == "One Queen")
          *    decL  finalcost = (100 * totalTime) + (addPEopleCost * totalTime)
-     
+    
          * 
          */
-
+        
     }
 
     protected void btnClear_Click(object sender, EventArgs e)

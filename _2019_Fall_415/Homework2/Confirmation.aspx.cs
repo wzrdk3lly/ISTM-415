@@ -9,19 +9,46 @@ public partial class Homework2_Confirmation : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        TextBox previousFirstName = (TextBox)PreviousPage.FindControl("txtFirstName");
-        lblFirstName.Text = previousFirstName.Text;
-        TextBox previousLastName = (TextBox)PreviousPage.FindControl("txtLastName");
-        
-        TextBox previousEmail = (TextBox)PreviousPage.FindControl("txtEmailAddress");
-        TextBox previousTelephone = (TextBox)PreviousPage.FindControl("txtTelephoneNumber");
-        DropDownList previousPrefered = (DropDownList)PreviousPage.FindControl("ddlPreffereedMethod");
+        if (!IsPostBack)
+        {
+            lblSubmitMessage.Visible = false;
+            TextBox previousFirstName = (TextBox)PreviousPage.FindControl("txtFirstName");
+            lblFirstName.Text = previousFirstName.Text;
+            TextBox previousLastName = (TextBox)PreviousPage.FindControl("txtLastName");
+            lblLastName.Text = previousLastName.Text;
+            TextBox previousEmail = (TextBox)PreviousPage.FindControl("txtEmailAddress");
+            lblEmail.Text = previousEmail.Text;
+            TextBox previousTelephone = (TextBox)PreviousPage.FindControl("txtTelephoneNumber");
+            lblPhone.Text = previousTelephone.Text;
+            DropDownList previousPrefered = (DropDownList)PreviousPage.FindControl("ddlPreffereedMethod");
 
-        TextBox previousArrival = (TextBox)PreviousPage.FindControl("txtArrivalDate");
-        TextBox previousDeparture = (TextBox)PreviousPage.FindControl("txtDepartureDate");
-    
-        DropDownList previousNumberPeople = (DropDownList)PreviousPage.FindControl("ddlNumberPeople");
-        RadioButtonList previousBedType = (RadioButtonList)PreviousPage.FindControl("rblBedType");
-        TextBox previousSpeialRequest = (TextBox)PreviousPage.FindControl("txtSpecialRequest");
+            lblPrefferredMethod.Text = previousPrefered.Text;
+
+            TextBox previousArrival = (TextBox)PreviousPage.FindControl("txtArrivalDate");
+            lblArrivalDate.Text = previousArrival.Text;
+
+            TextBox previousDeparture = (TextBox)PreviousPage.FindControl("txtDepartureDate");
+            lblDepartureDate.Text = previousDeparture.Text;
+            Label previousDays = (Label)PreviousPage.FindControl("lblHiddenDays");
+            lblNoDays.Text = previousDays.Text;
+
+            DropDownList previousNumberPeople = (DropDownList)PreviousPage.FindControl("ddlNumberPeople");
+            lblNoPeople.Text = previousNumberPeople.Text;
+
+
+            RadioButtonList previousBedType = (RadioButtonList)PreviousPage.FindControl("rblBedType");
+            lblBedType.Text = previousBedType.Text;
+
+            TextBox previousSpeialRequest = (TextBox)PreviousPage.FindControl("txtSpecialRequest");
+            lblSpecialRequest.Text = previousSpeialRequest.Text;
+
+            Label previousFinalCost = (Label)PreviousPage.FindControl("lblHiddenFinalCost");
+            lblTotalCost.Text = previousFinalCost.Text;
+        }
+    }
+
+    protected void btnConfirm_Click(object sender, EventArgs e)
+    {
+        lblSubmitMessage.Visible = true;
     }
 }

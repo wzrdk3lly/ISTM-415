@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Confirmation.aspx.cs" Inherits="Homework2_Confirmation" %>
 
 <!DOCTYPE html>
-    
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
@@ -14,9 +14,8 @@
         }
         .auto-style3 {
             width: 1384px;
-        }
-        .auto-style4 {
-            width: 1382px;
+            color: #FF0000;
+            margin-left: 40px;
         }
         .auto-style5 {
             width: 1168px;
@@ -38,10 +37,14 @@
             margin-bottom: 32px;
             color: #33CC33;
         }
+        .auto-style12 {
+            width: 1382px;
+            color: #0000FF;
+        }
         </style>
 </head>
 <body>
-    <h1 class="auto-style4">Royal Inns and Suites </h1>
+    <h1 class="auto-style12">Royal Inns and Suites </h1>
     <h2 class="auto-style1"><span class="auto-style3"><em>Where you're always treated like royalty</em></span> </h2>
     <form id="form1" runat="server" defaultfocus="txtArrivalDate">
         <div>
@@ -50,37 +53,37 @@
     <p>
         &nbsp;
     </p>
-    <h2 class="auto-style4">Request Confirmation </h2>
+    <h2 class="auto-style12">Request Confirmation </h2>
     <h3>Please confirm your reservation request</h3>
         <table class="auto-style8">
             <tr>
                 <td class="auto-style7">First name</td>
                 <td class="auto-style5">
-                    <asp:Label ID="lblFirstName" runat="server"></asp:Label>
+                    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style7">Last name</td>
                 <td class="auto-style5">
-                    <asp:Label ID="lblLastName" runat="server"></asp:Label>
+                    <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style7">Email</td>
                 <td class="auto-style5">
-                    <asp:Label ID="lblEmail" runat="server"></asp:Label>
+                    <asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style7">Phone</td>
                 <td class="auto-style5">
-                    <asp:Label ID="lblPhone" runat="server"></asp:Label>
+                    <asp:Label ID="Label4" runat="server" Text="Label"></asp:Label>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style7">Preferred method</td>
                 <td class="auto-style5">
-                    <asp:Label ID="lblPrefferredMethod" runat="server"></asp:Label>
+                    <asp:Label ID="Label5" runat="server" Text="Label"></asp:Label>
                 </td>
             </tr>
         </table>
@@ -90,47 +93,47 @@
             <tr>
                 <td class="auto-style10">Arrival date</td>
                 <td class="auto-style9">
-                    <asp:Label ID="lblArrivalDate" runat="server"></asp:Label>
+                    <asp:Label ID="Label6" runat="server" Text="Label"></asp:Label>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style10">Departure date</td>
                 <td class="auto-style9">
-                    <asp:Label ID="lblDepartureDate" runat="server"></asp:Label>
+                    <asp:Label ID="Label7" runat="server" Text="Label"></asp:Label>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style10">No. of days</td>
                 <td class="auto-style9">
-                    <asp:Label ID="lblNoDays" runat="server"></asp:Label>
+                    <asp:Label ID="Label8" runat="server" Text="Label"></asp:Label>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style10">No. of people</td>
                 <td class="auto-style9">
-                    <asp:Label ID="lblNoPeople" runat="server"></asp:Label>
+                    <asp:Label ID="Label9" runat="server" Text="Label"></asp:Label>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style10">Bed type</td>
                 <td class="auto-style9">
-                    <asp:Label ID="lblBedType" runat="server"></asp:Label>
+                    <asp:Label ID="Label10" runat="server" Text="Label"></asp:Label>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style10">Special request</td>
                 <td class="auto-style9">
-                    <asp:Label ID="lblSpecialRequest" runat="server"></asp:Label>
+                    <asp:Label ID="Label11" runat="server" Text="Label"></asp:Label>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style10">Total cost</td>
                 <td class="auto-style9">
-                    <asp:Label ID="lblTotalCost" runat="server"></asp:Label>
+                    <asp:Label ID="Label12" runat="server" Text="Label"></asp:Label>
                 </td>
             </tr>
         </table>
-        <asp:Button ID="btnConfirm" runat="server" Text="Confirm Request" Width="251px" />
+        <asp:Button ID="btnConfirm" runat="server" Text="Confirm Request" Width="251px" OnClick="btnConfirm_Click" />
 &nbsp;
         <asp:Button ID="btnModifyRequest" runat="server" Text="Modify Request" Width="251px" />
         <p>
